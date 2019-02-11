@@ -25,6 +25,8 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+	devtool: 'inline-source-map',
+	target: 'node',
 	module: {
 		rules: [
 			{
@@ -45,9 +47,18 @@ module.exports = {
 				},
 
 				test: /\.js$/
-			}
+			},
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
 		]
 	},
+
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
 
 	output: {
 		chunkFilename: '[name].[chunkhash].js',
