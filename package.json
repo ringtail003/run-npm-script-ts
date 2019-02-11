@@ -1,0 +1,11 @@
+{
+  "name": "run-npm-script-ts",
+  "version": "1.0.0",
+  "description": "Write npm script by typescript and immediately.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
